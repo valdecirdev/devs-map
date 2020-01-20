@@ -8,7 +8,7 @@ module.exports = {
         const techs_array = parseStringAsArray(techs);
 
         let devs = [];
-        if(techs_array.lenght > 0){
+        // if(techs_array.lenght > 0){
             devs = await Dev.find({
                 techs: {
                     $in: techs_array,
@@ -23,9 +23,9 @@ module.exports = {
                     },
                 }
             });
-        } else {
-            devs = await Dev.find();
-        }
+        // } else {
+        //     devs = await Dev.find();
+        // }
 
         response.json(devs);
     }
